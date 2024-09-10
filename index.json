@@ -1,0 +1,13 @@
+{
+  "recipes": {
+    "mjfk23/phplib": ["1.0"]
+  },
+  "branch": "main",
+  "is_contrib": true,
+  "_links": {
+    "repository": "github.com/mjfk23/symfony-recipes",
+    "origin_template": "{package}:{version}@github.com/mjfk23/symfony-recipes:main",
+    "recipe_template": "https://raw.githubusercontent.com/mjfk23/symfony-recipes/main/{package_dotted}.{version}.json",
+    "recipe_template_relative": "{package_dotted}.{version}.json"
+  }
+}
