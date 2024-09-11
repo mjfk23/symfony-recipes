@@ -1,6 +1,7 @@
 {
   "recipes": {
-    "mjfk23/phplib": ["1.0"]
+    "mjfk23/phplib": ["1.0"],
+    "phpstan/phpstan": ["1.0"]
   },
   "branch": "main",
   "is_contrib": true,

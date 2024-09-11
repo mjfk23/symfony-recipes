@@ -1,0 +1,27 @@
+{
+  "manifests": {
+    "phpstan/phpstan": {
+      "manifest": {
+        "copy-from-recipe": {
+          "phpstan.neon": "phpstan.neon"
+        }
+      },
+      "files": {
+        "phpstan.neon": {
+          "contents": [
+            "parameters:",
+            "    level: 9",
+            "    paths:",
+            "        - bin",
+            "        - config",
+            "        - public",
+            "        - src",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "5e490cc197fb6bb1ae22e5abbc531ddc633b6767"
+    }
+  }
+}
