@@ -7,7 +7,7 @@
         }
       },
       "files": {
-        "config/packages/gadget_http.yaml": {
+        "config/packages/gadget_log.yaml": {
           "contents": [
             "services:",
             "    Gadget\\Log\\:",
@@ -19,7 +19,7 @@
           "executable": false
         }
       },
-      "ref": "7f8f9c0bf8a6a7e4547a32d07d29a83d4f8cb945"
+      "ref": "a5d9cbc47c1375193b5b6adc223dd9100400c05e"
     }
   }
 }

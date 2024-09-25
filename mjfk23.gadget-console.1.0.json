@@ -7,7 +7,7 @@
         }
       },
       "files": {
-        "config/packages/gadget_http.yaml": {
+        "config/packages/gadget_console.yaml": {
           "contents": [
             "services:",
             "    Gadget\\Console\\:",
@@ -19,7 +19,7 @@
           "executable": false
         }
       },
-      "ref": "af6f416a1ff3eb624397fc3efd08a7f4111935cd"
+      "ref": "cfe05bafc3af465689faea4ad0fa8fef07bb3467"
     }
   }
 }
