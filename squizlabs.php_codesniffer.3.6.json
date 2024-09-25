@@ -3,25 +3,23 @@
     "squizlabs/php_codesniffer": {
       "manifest": {
         "copy-from-recipe": {
-          "phpcs.xml": "phpcs.xml"
+          "phpcs.xml.dist": "phpcs.xml.dist"
         },
-        "gitignore": ["/.phpcs-cache"]
+        "gitignore": ["/.phpcs-cache", "phpcs.xml"]
       },
       "files": {
-        "phpcs.xml": {
+        "phpcs.xml.dist": {
           "contents": [
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+            "<ruleset name=\"Gadget coding standards\">",
+            "    <description>Gadget coding standards</description>",
             "",
-            "<ruleset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
-            "         xsi:noNamespaceSchemaLocation=\"vendor/squizlabs/php_codesniffer/phpcs.xsd\">",
-            "",
-            "    <arg name=\"basepath\" value=\".\"/>",
-            "    <arg name=\"cache\" value=\".phpcs-cache\"/>",
+            "    <arg value=\"p\"/>",
             "    <arg name=\"colors\"/>",
-            "    <arg name=\"extensions\" value=\"php\"/>",
-            "",
             "    <rule ref=\"PSR12\"/>",
             "",
+            "    <arg name=\"basepath\" value=\".\"/>",
+            "    <arg name=\"extensions\" value=\"php\"/>",
             "    <file>bin/</file>",
             "    <file>config/</file>",
             "    <file>public/</file>",
@@ -34,7 +32,7 @@
           "executable": false
         }
       },
-      "ref": "1019e5c08d4821cb9b77f4891f8e9c31ff20ac6f"
+      "ref": "8ab46c3495b0fcdfed304ba11f2fa4f3f89a98f3"
     }
   }
 }
