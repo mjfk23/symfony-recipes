@@ -1,8 +1,14 @@
 {
   "recipes": {
-    "mjfk23/phplib": ["1.0"],
+    "mjfk23/gadget-console": ["1.0"],
+    "mjfk23/gadget-core": ["1.0"],
+    "mjfk23/gadget-http": ["1.0"],
+    "mjfk23/gadget-ldap": ["1.0"],
+    "mjfk23/gadget-log": ["1.0"],
     "phpstan/phpstan": ["1.0"],
-    "squizlabs/php_codesniffer": ["3.6"]
+    "phpunit/phpunit": ["10.0"],
+    "squizlabs/php_codesniffer": ["3.6"],
+    "vimeo/psalm": ["5.26"]
   },
   "branch": "main",
   "is_contrib": true,
