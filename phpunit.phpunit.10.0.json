@@ -1,6 +1,6 @@
 {
     "manifests": {
-      "phpstan/phpstan": {
+      "phpunit/phpunit": {
         "manifest": {
           "copy-from-recipe": {
             "phpunit.xml.dist": "phpunit.xml.dist"
@@ -34,7 +34,7 @@
             "executable": false
           }
         },
-        "ref": "85d667bee1a559050d0b71dff85acdd8dcaa5556"
+        "ref": "599059e2c13caa3ef2621b85a15a3a94706a8d6a"
       }
     }
   }

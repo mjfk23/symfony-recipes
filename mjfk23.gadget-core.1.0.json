@@ -1,6 +1,6 @@
 {
   "manifests": {
-    "mjfk23/phplib": {
+    "mjfk23/gadget-core": {
       "manifest": {
         "copy-from-recipe": {
           "config/": "%CONFIG_DIR%/"
@@ -19,7 +19,7 @@
           "executable": false
         }
       },
-      "ref": "3c12f2ca08cb2c8de64bf705e6716415d4563c9c"
+      "ref": "2aa6ef55b12508aaf8b51ea345cae4f93041795f"
     }
   }
 }

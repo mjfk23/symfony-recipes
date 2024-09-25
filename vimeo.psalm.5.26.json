@@ -1,6 +1,6 @@
 {
     "manifests": {
-      "phpstan/phpstan": {
+      "vimeo/psalm": {
         "manifest": {
           "copy-from-recipe": {
             "psalm.xml.dist": "psalm.xml.dist"
@@ -33,7 +33,7 @@
             "executable": false
           }
         },
-        "ref": "a99c4167b29cb9e187c6510f2676ab44c3441bc3"
+        "ref": "43b8fbb4486d2707459dc60fb17befa3b456c334"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
   "manifests": {
-    "mjfk23/phplib": {
+    "mjfk23/gadget-ldap": {
       "manifest": {
         "copy-from-recipe": {
           "config/": "%CONFIG_DIR%/"
@@ -25,7 +25,7 @@
           "executable": false
         }
       },
-      "ref": "0ed19da8c45c5da169ee347334906020a031e564"
+      "ref": "df652d464d53945b611a225daea4a14b308a5868"
     }
   }
 }
