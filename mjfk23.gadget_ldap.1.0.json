@@ -1,0 +1,31 @@
+{
+  "manifests": {
+    "mjfk23/phplib": {
+      "manifest": {
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%/"
+        }
+      },
+      "files": {
+        "config/packages/mjfk23_phplib.yaml": {
+          "contents": [
+            "services:",
+            "    Gadget\\LDAP\\:",
+            "        autowire: true",
+            "        autoconfigure: true",
+            "        resource: '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/'",
+            "",
+            "    Gadget\\LDAP\\Connection:",
+            "        arguments:",
+            "            $uri: '%env(string:default::LDAP_URI)%'",
+            "            $user: '%env(string:default::LDAP_USER)%'",
+            "            $pass: '%env(string:default::LDAP_PASS)%'",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "0ed19da8c45c5da169ee347334906020a031e564"
+    }
+  }
+}

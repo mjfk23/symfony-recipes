@@ -1,0 +1,25 @@
+{
+  "manifests": {
+    "mjfk23/phplib": {
+      "manifest": {
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%/"
+        }
+      },
+      "files": {
+        "config/packages/gadget_http.yaml": {
+          "contents": [
+            "services:",
+            "    Gadget\\:",
+            "        autowire: true",
+            "        autoconfigure: true",
+            "        resource: '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/'",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "3c12f2ca08cb2c8de64bf705e6716415d4563c9c"
+    }
+  }
+}

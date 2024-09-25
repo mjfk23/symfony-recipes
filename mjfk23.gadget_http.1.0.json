@@ -1,0 +1,35 @@
+{
+  "manifests": {
+    "mjfk23/phplib": {
+      "manifest": {
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%/"
+        }
+      },
+      "files": {
+        "config/packages/gadget_http.yaml": {
+          "contents": [
+            "services:",
+            "    Gadget\\Http\\:",
+            "        autowire: true",
+            "        autoconfigure: true",
+            "        resource: '%kernel.project_dir%/vendor/mjfk23/gadget-http/src/'",
+            "",
+            "    Gadget\\Http\\OAuth\\OAuthConfig:",
+            "        arguments:",
+            "            $authCodeUri: '%env(string:default::OAUTH_AUTHCODE_URI)%'",
+            "            $tokenUri: '%env(string:default::OAUTH_TOKEN_URI)%'",
+            "            $clientId: '%env(string:default::OAUTH_CLIENT_ID)%'",
+            "            $clientSecret: '%env(string:default::OAUTH_CLIENT_SECRET)%'",
+            "            $redirectUri: '%env(string:default::OAUTH_REDIRECT_URI)%'",
+            "            $scope: '%env(string:default::OAUTH_SCOPE)%'",
+            "            $jwksUri: '%env(string:default::OAUTH_JWKS_URI)%'",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "9be738484f2777f83346604ead3b5624fcb4f3d9"
+    }
+  }
+}
