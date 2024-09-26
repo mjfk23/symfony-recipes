@@ -1,0 +1,33 @@
+{
+  "manifests": {
+    "php-http/discovery": {
+      "manifest": {
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%/"
+        }
+      },
+      "files": {
+        "config/packages/http_discovery.yaml": {
+          "contents": [
+            "services:",
+            "    Psr\\Http\\Message\\RequestFactoryInterface: '@http_discovery.psr17_factory'",
+            "    Psr\\Http\\Message\\ResponseFactoryInterface: '@http_discovery.psr17_factory'",
+            "    Psr\\Http\\Message\\ServerRequestFactoryInterface: '@http_discovery.psr17_factory'",
+            "    Psr\\Http\\Message\\StreamFactoryInterface: '@http_discovery.psr17_factory'",
+            "    Psr\\Http\\Message\\UploadedFileFactoryInterface: '@http_discovery.psr17_factory'",
+            "    Psr\\Http\\Message\\UriFactoryInterface: '@http_discovery.psr17_factory'",
+            "    Psr\\Http\\Client\\ClientInterface: '@http_discovery.psr18_client'",
+            "",
+            "    http_discovery.psr17_factory:",
+            "        class: Http\\Discovery\\Psr17Factory",
+            "    http_discovery.psr18_client:",
+            "        class: Http\\Discovery\\Psr18Client",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "4bf6c646da7ba4a5d6acc49d5f9b9fbdcdeae7b2"
+    }
+  }
+}

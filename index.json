@@ -5,6 +5,7 @@
     "mjfk23/gadget-http": ["1.0"],
     "mjfk23/gadget-ldap": ["1.0"],
     "mjfk23/gadget-log": ["1.0"],
+    "php-http/discovery": ["1.19"],
     "phpstan/phpstan": ["1.0"],
     "phpunit/phpunit": ["10.0"],
     "squizlabs/php_codesniffer": ["3.6"],
