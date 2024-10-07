@@ -7,7 +7,7 @@
         }
       },
       "files": {
-        "config/packages/mjfk23_ldap.yaml": {
+        "config/packages/gadget_ldap.yaml": {
           "contents": [
             "services:",
             "    Gadget\\LDAP\\:",
@@ -25,7 +25,7 @@
           "executable": false
         }
       },
-      "ref": "714c7f251f2cc48c1dc08265b3c87c4bcd1cb266"
+      "ref": "3665783a15697920933055edbc90e188885d37b1"
     }
   }
 }
