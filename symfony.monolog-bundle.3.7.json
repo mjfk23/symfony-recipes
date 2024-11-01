@@ -31,7 +31,7 @@
             "    - deprecation",
             "  handlers:",
             "    main:",
-            "      type: stream",
+            "      type: rotating_file",
             "      path: '%env(string:default:log_path:LOG_PATH)%'",
             "      level: '%env(string:default:log_level:LOG_LEVEL)%'",
             "      formatter: monolog.formatter.main",
@@ -50,7 +50,7 @@
           "executable": false
         }
       },
-      "ref": "9482d211d020cdffe13e7f1bfef13d1fad25c901"
+      "ref": "29694021fb7ca5281446572df9e9f4584f1d492d"
     }
   }
 }
