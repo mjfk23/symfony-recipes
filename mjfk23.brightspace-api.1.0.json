@@ -10,33 +10,53 @@
         "config/packages/brightspace_api.yaml": {
           "contents": [
             "services:",
-            "    Brightspace\\Api\\:",
-            "        autowire: true",
-            "        autoconfigure: true",
-            "        resource: '%kernel.project_dir%/vendor/mjfk23/brightspace-api/src/'",
+            "  _defaults:",
+            "    autowire: true",
+            "    autoconfigure: true",
             "",
-            "    Brightspace\\Api\\Auth\\Model\\OAuthConfig:",
-            "        arguments:",
-            "            $hostName: '%env(string:default::D2L_HOST_NAME)%'",
-            "            $orgId: '%env(int:default::D2L_ORG_ID)%'",
-            "            $clientId: '%env(string:default::D2L_CLIENT_ID)%'",
-            "            $clientSecret: '%env(string:default::D2L_CLIENT_SECRET)%'",
-            "            $redirectUri: '%env(string:default::D2L_REDIRECT_URI)%'",
-            "            $scope: '%env(string:default::D2L_SCOPE)%'",
+            "  Brightspace\\Api\\:",
+            "    resource: '%kernel.project_dir%/vendor/mjfk23/brightspace-api/src/'",
+            "    exclude:",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/DependencyInjection/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/Entity/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/Kernel.php'",
             "",
-            "    Brightspace\\Api\\Auth\\Model\\LoginCredentials:",
-            "        arguments:",
-            "            $user: '%env(string:default::D2L_USER_NAME)%'",
-            "            $pass: '%env(string:default::D2L_PASS)%'",
-            "            $mfa: '%env(string:default::D2L_MFA)%'",
+            "  Brightspace\\Api\\Auth\\Model\\Config:",
+            "    arguments:",
+            "      $hostName: '%env(string:default::D2L_HOST_NAME)%'",
+            "      $orgId: '%env(int:default::D2L_ORG_ID)%'",
+            "      $clientId: '%env(string:default::D2L_CLIENT_ID)%'",
+            "      $clientSecret: '%env(string:default::D2L_CLIENT_SECRET)%'",
+            "      $redirectUri: '%env(string:default::D2L_REDIRECT_URI)%'",
+            "      $scope: '%env(string:default::D2L_SCOPE)%'",
             "",
-            "    Gadget\\Http\\OAuth\\OAuthConfig:",
-            "        alias: Brightspace\\Api\\Auth\\Model\\OAuthConfig"
+            "  Brightspace\\Api\\Auth\\Model\\LoginCredentials:",
+            "    arguments:",
+            "      $user: '%env(string:default::D2L_USER_NAME)%'",
+            "      $pass: '%env(string:default::D2L_PASS)%'",
+            "      $mfa: '%env(string:default::D2L_MFA)%'",
+            ""
+          ],
+          "executable": false
+        },
+        "config/packages/gadget.yaml": {
+          "contents": [
+            "",
+            "  Gadget\\Http\\OAuth\\Model\\Config:",
+            "    alias: Brightspace\\Api\\Auth\\Model\\Config",
+            "",
+            "  Gadget\\Http\\ApiClient:",
+            "    calls:",
+            "        - addMiddleware:",
+            "            - '@Gadget\\Http\\OAuth\\Middleware\\AccessTokenMiddleware'",
+            "            - '@Brightspace\\Api\\Auth\\Middleware\\LoginMiddleware'",
+            "            - '@Brightspace\\Api\\Core\\Middleware\\UriMiddleware'",
+            ""
           ],
           "executable": false
         }
       },
-      "ref": "6b0ad5074dbeb5266f2df8146fe56f527ba26a4f"
+      "ref": "6dcf3e984a6caa57484264704b7afd7d89e8824f"
     }
   }
 }
