@@ -7,25 +7,27 @@
         }
       },
       "files": {
-        "config/packages/gadget_ldap.yaml": {
+        "config/packages/gadget.yaml": {
           "contents": [
-            "services:",
-            "    Gadget\\LDAP\\:",
-            "        autowire: true",
-            "        autoconfigure: true",
-            "        resource: '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/'",
             "",
-            "    Gadget\\LDAP\\Connection:",
-            "        arguments:",
-            "            $uri: '%env(string:default::LDAP_URI)%'",
-            "            $user: '%env(string:default::LDAP_USER)%'",
-            "            $pass: '%env(string:default::LDAP_PASS)%'",
+            "  Gadget\\LDAP\\:",
+            "    resource: '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/'",
+            "    exclude:",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/DependencyInjection/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/Entity/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/Kernel.php'",
+            "",
+            "  Gadget\\LDAP\\Connection:",
+            "    arguments:",
+            "      $uri: '%env(string:default::LDAP_URI)%'",
+            "      $user: '%env(string:default::LDAP_USER)%'",
+            "      $pass: '%env(string:default::LDAP_PASS)%'",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "3665783a15697920933055edbc90e188885d37b1"
+      "ref": "c3048e56ec4ae0d8b370bcc06e4f4305c94a9ff5"
     }
   }
 }

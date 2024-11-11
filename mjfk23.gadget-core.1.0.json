@@ -7,19 +7,25 @@
         }
       },
       "files": {
-        "config/packages/gadget_core.yaml": {
+        "config/packages/gadget.yaml": {
           "contents": [
             "services:",
-            "    Gadget\\:",
-            "        autowire: true",
-            "        autoconfigure: true",
-            "        resource: '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/'",
+            "  _defaults:",
+            "    autowire: true",
+            "    autoconfigure: true",
+            "",
+            "  Gadget\\:",
+            "    resource: '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/'",
+            "    exclude:",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/DependencyInjection/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/Entity/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-core/src/Kernel.php'",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "ee823375e301ef72a5af0b54a0a7935f3f72b173"
+      "ref": "19d8c794a88184e50f4a669b30a25077069d7867"
     }
   }
 }

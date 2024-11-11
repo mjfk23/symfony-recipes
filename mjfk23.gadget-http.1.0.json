@@ -7,29 +7,31 @@
         }
       },
       "files": {
-        "config/packages/gadget_http.yaml": {
+        "config/packages/gadget.yaml": {
           "contents": [
-            "services:",
-            "    Gadget\\Http\\:",
-            "        autowire: true",
-            "        autoconfigure: true",
-            "        resource: '%kernel.project_dir%/vendor/mjfk23/gadget-http/src/'",
             "",
-            "    Gadget\\Http\\OAuth\\OAuthConfig:",
-            "        arguments:",
-            "            $authCodeUri: '%env(string:default::OAUTH_AUTHCODE_URI)%'",
-            "            $tokenUri: '%env(string:default::OAUTH_TOKEN_URI)%'",
-            "            $clientId: '%env(string:default::OAUTH_CLIENT_ID)%'",
-            "            $clientSecret: '%env(string:default::OAUTH_CLIENT_SECRET)%'",
-            "            $redirectUri: '%env(string:default::OAUTH_REDIRECT_URI)%'",
-            "            $scope: '%env(string:default::OAUTH_SCOPE)%'",
-            "            $jwksUri: '%env(string:default::OAUTH_JWKS_URI)%'",
+            "  Gadget\\Http\\:",
+            "    resource: '%kernel.project_dir%/vendor/mjfk23/gadget-http/src/'",
+            "    exclude:",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-http/src/DependencyInjection/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-http/src/Entity/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-http/src/Kernel.php'",
+            "",
+            "  Gadget\\Http\\OAuth\\OAuthConfig:",
+            "    arguments:",
+            "      $authCodeUri: '%env(string:default::OAUTH_AUTHCODE_URI)%'",
+            "      $tokenUri: '%env(string:default::OAUTH_TOKEN_URI)%'",
+            "      $clientId: '%env(string:default::OAUTH_CLIENT_ID)%'",
+            "      $clientSecret: '%env(string:default::OAUTH_CLIENT_SECRET)%'",
+            "      $redirectUri: '%env(string:default::OAUTH_REDIRECT_URI)%'",
+            "      $scope: '%env(string:default::OAUTH_SCOPE)%'",
+            "      $jwksUri: '%env(string:default::OAUTH_JWKS_URI)%'",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "e0c2c4c98b6c04d8754a419b0c3557ba9bbaf754"
+      "ref": "4d54b58a99e33155d79af13dd8ccc5a7b91d8dc8"
     }
   }
 }

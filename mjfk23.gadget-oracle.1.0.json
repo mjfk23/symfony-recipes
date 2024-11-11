@@ -7,25 +7,27 @@
         }
       },
       "files": {
-        "config/packages/gadget_oracle.yaml": {
+        "config/packages/gadget.yaml": {
           "contents": [
-            "services:",
-            "    Gadget\\Oracle\\:",
-            "        autowire: true",
-            "        autoconfigure: true",
-            "        resource: '%kernel.project_dir%/vendor/mjfk23/gadget-oracle/src/'",
             "",
-            "    Gadget\\Oracle\\Command\\Input:",
-            "        arguments:",
-            "            $username: '%env(default::ORACLE_USER)%'",
-            "            $password: '%env(default::ORACLE_PASS)%'",
-            "            $connectIdentifier: '%env(default::ORACLE_CONN)%'",
+            "  Gadget\\Oracle\\:",
+            "    resource: '%kernel.project_dir%/vendor/mjfk23/gadget-oracle/src/'",
+            "    exclude:",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-oracle/src/DependencyInjection/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-oracle/src/Entity/'",
+            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-oracle/src/Kernel.php'",
+            "",
+            "  Gadget\\Oracle\\Command\\Input:",
+            "    arguments:",
+            "      $username: '%env(default::ORACLE_USER)%'",
+            "      $password: '%env(default::ORACLE_PASS)%'",
+            "      $connectIdentifier: '%env(default::ORACLE_CONN)%'",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "b94e06ba94e2045fe82fb4e68af231995bffeba5"
+      "ref": "3df47218cefbae6bb492707b05878012cc27fcb1"
     }
   }
 }
