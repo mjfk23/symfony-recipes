@@ -7,15 +7,12 @@
         }
       },
       "files": {
-        "config/packages/gadget.yaml": {
+        "config/packages/gadget_ldap.yaml": {
           "contents": [
-            "",
-            "  Gadget\\LDAP\\:",
-            "    resource: '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/'",
-            "    exclude:",
-            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/DependencyInjection/'",
-            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/Entity/'",
-            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-ldap/src/Kernel.php'",
+            "services:",
+            "  _defaults:",
+            "    autowire: true",
+            "    autoconfigure: true",
             "",
             "  Gadget\\LDAP\\Connection:",
             "    arguments:",
@@ -27,7 +24,7 @@
           "executable": false
         }
       },
-      "ref": "c3048e56ec4ae0d8b370bcc06e4f4305c94a9ff5"
+      "ref": ""
     }
   }
 }

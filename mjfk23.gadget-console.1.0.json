@@ -7,15 +7,12 @@
         }
       },
       "files": {
-        "config/packages/gadget.yaml": {
+        "config/packages/gadget_console.yaml": {
           "contents": [
-            "",
-            "  Gadget\\Console\\:",
-            "    resource: '%kernel.project_dir%/vendor/mjfk23/gadget-console/src/'",
-            "    exclude:",
-            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-console/src/DependencyInjection/'",
-            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-console/src/Entity/'",
-            "      - '%kernel.project_dir%/vendor/mjfk23/gadget-console/src/Kernel.php'",
+            "services:",
+            "  _defaults:",
+            "    autowire: true",
+            "    autoconfigure: true",
             "",
             "  Gadget\\Console\\Shell\\ProcessShellEnv:",
             "    arguments:",
@@ -25,7 +22,7 @@
           "executable": false
         }
       },
-      "ref": "079b8dfb0a30799daa75cfeb4335241f229de8ae"
+      "ref": ""
     }
   }
 }
