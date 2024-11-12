@@ -2,7 +2,6 @@
   "recipes": {
     "mjfk23/brightspace-api": ["1.0"],
     "mjfk23/gadget-console": ["1.0"],
-    "mjfk23/gadget-core": ["1.0"],
     "mjfk23/gadget-http": ["1.0"],
     "mjfk23/gadget-ldap": ["1.0"],
     "mjfk23/gadget-log": ["1.0"],
