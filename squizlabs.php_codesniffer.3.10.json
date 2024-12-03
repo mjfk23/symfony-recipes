@@ -1,0 +1,37 @@
+{
+  "manifests": {
+    "squizlabs/php_codesniffer": {
+      "manifest": {
+        "copy-from-recipe": {
+          "phpcs.xml": "phpcs.xml"
+        }
+      },
+      "files": {
+        "phpcs.xml": {
+          "contents": [
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+            "<ruleset name=\"Gadget coding standards\">",
+            "    <description>Gadget coding standards</description>",
+            "",
+            "    <arg value=\"p\"/>",
+            "    <arg name=\"colors\"/>",
+            "    <rule ref=\"PSR12\"/>",
+            "",
+            "    <arg name=\"basepath\" value=\".\"/>",
+            "    <arg name=\"extensions\" value=\"php\"/>",
+            "    <file>bin/</file>",
+            "    <file>config/</file>",
+            "    <file>public/</file>",
+            "    <file>src/</file>",
+            "    <file>tests/</file>",
+            "",
+            "</ruleset>",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "a59bf2e843015e73ca3abe5e96cbe9c6add3ea85"
+    }
+  }
+}
