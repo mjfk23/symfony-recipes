@@ -23,15 +23,13 @@
             "    <file>config/</file>",
             "    <file>public/</file>",
             "    <file>src/</file>",
-            "    <file>tests/</file>",
-            "",
             "</ruleset>",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "a59bf2e843015e73ca3abe5e96cbe9c6add3ea85"
+      "ref": "a9c5c4b8c9a0aa61041030215b905c0255d201a5"
     }
   }
 }

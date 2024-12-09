@@ -17,13 +17,12 @@
             "        - config",
             "        - public",
             "        - src",
-            "        - tests",
             ""
           ],
           "executable": false
         }
       },
-      "ref": "255632cd5d847606353fd31d7b272e2a6ff28880"
+      "ref": "63d62350cb8c52138dbe262d76ef17df366720dd"
     }
   }
 }
